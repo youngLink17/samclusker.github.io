@@ -1,0 +1,56 @@
+<footer class="site-footer h-card">
+    <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  
+    <div class="wrapper">
+  
+      <div class="footer-col-wrapper">
+        <div class="footer-col">
+          <p class="feed-subscribe">
+            <a href="{{ 'feed.xml' | relative_url }}">
+              <svg class="svg-icon orange">
+                <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+              </svg><span>Subscribe</span>
+            </a>
+          </p>  
+        {%- if site.author %}
+          <ul class="contact-list">
+            {% if site.author.name -%}
+              <li class="p-name">{{ site.author.name | escape }}</li>
+            {% endif -%}
+            {% if site.author.email -%}
+              <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+            {%- endif %}
+          </ul>
+        {%- endif %}
+        </div>
+        <div class="footer-col">
+        </div>
+        <div class="footer-col">
+            {%- if site.links %}
+            <ul class="contact-list">
+                {% if site.links.iff -%}
+                  <li class="p-name">Co-founded blog talking about tech and the future!</li>
+                  <li><a class="u-email" href="{{ site.links.iff }}">{{ site.links.iff }}</a></li>
+                {% endif -%}
+                {% if site.links.newsletter -%}
+                  <li class="p-name">Subscribe to my newsletter.</li>
+                  <li><a class="u-email" href="{{ site.links.newsletter }}">{{ site.links.newsletter }}</a></li>
+                {%- endif %}
+            </ul>
+            {%- endif %}
+        </div>
+        <div class="footer-col">
+        </div>
+        <div class="footer-col">
+          <div class="social-links">
+            {%- include social.html -%}
+            <a href="https://www.linkedin.com/in/%F0%9F%91%A8%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB-sam-clusker-841193118/">
+                <svg class="svg-icon orange">
+                  <use xlink:href="{{ '../assets/minima-social-icons.svg#linkedin' | https://www.linkedin.com/in/%F0%9F%91%A8%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB-sam-clusker-841193118/ }}"></use>
+                </svg><span>Sam Clusker</span>
+            </a>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
